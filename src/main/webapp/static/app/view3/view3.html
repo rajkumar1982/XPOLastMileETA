@@ -1,0 +1,30 @@
+<div class="row"  ng-controller="View3Ctrl">          
+  <div class="col-xs-12 col-md-8">
+    <h3>Add Delay</h3>
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label for="driverId" class="col-sm-2 control-label">Driver ID:</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" id="dId" placeholder="Driver ID">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="cnsgnnmbr" class="col-sm-2 control-label">Consignment Number:</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" id="cnsgnnmbr" placeholder="Consignment Number">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="delay" class="col-sm-2 control-label">Delay In Minutes</label>
+        <div class="col-sm-6">
+          <input type="Number" class="form-control" id="delay" placeholder="Delay in mins">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-default" ng-click="addDelay()">Add Delay</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

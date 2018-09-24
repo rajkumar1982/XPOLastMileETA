@@ -1,0 +1,41 @@
+<div class=" container-fluid"  ng-controller="View1Ctrl">
+<div class="row" >          
+          <div class="col-xs-12 col-md-6">
+           <h3>Dynamic Tracking Status</h3>
+         <table st-table="lastmileroutes"  class="table">
+            <tr>
+              <th>Consignment</th>
+              <th>Pickup/ Delivery</th>
+              <th colspan=3>Status</th>
+              <th>Additional Products</th>
+            </tr>
+            <tr>
+				<th colspan="7"><input st-search="" class="form-control" placeholder="Enter Search key" type="text"/></th>
+			</tr>
+            <tr ng-repeat = "route in lastmileroutes">
+                <td>{{ route.id }}</td>
+                <td>{{ route.type == 'P' ? 'Pickup' :(route.type == 'D' ? 'Delivery':'')  }}</td>
+                 <td>{{ (route.type == 'P'  &&  route.isCompleted == true) ? 'Collected &In Transit' : ((route.type == 'D'  &&  route.isCompleted == true ) ? 'Delivered' : ( route.isCompleted == false ) ?'Scheduled':'') }}</td>
+                <td><!-- {{ (route.type == 'D'  &&  route.isCompleted == true) ? '✔ ':(route.type == 'P'  &&  route.isCompleted == true  ? '✗ ' :'')}} --></td>
+                <td>{{ route.pod }}</td>
+                <td>{{ route.addnl }}</td>
+            </tr>
+        </table>
+      </div>
+         <div class="col-xs-12 col-md-6" >            
+      	 <h3>Route Map</h3>
+      	 <br>
+      	 <div id="map"></div>
+         </div>
+         
+  	</div>
+  	
+ <div class="row" >  
+  <div class="col-xs-12" >            
+      <h3>Live Delivery Times</h3>
+   
+	
+ </div>
+ </div>
+    <div id="areachart" class="chart" ng-controller="AreaChartCtrl"></div>
+</div>

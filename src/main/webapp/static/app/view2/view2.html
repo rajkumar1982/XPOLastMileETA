@@ -1,0 +1,51 @@
+<div class="row"  ng-controller="View2Ctrl">          
+  <div class="col-xs-12 col-md-8">
+    <h3>New Pickup</h3>
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label for="inputEmail3" class="col-sm-2 control-label">Contact</label>
+        <div class="col-sm-6">
+          <input type="email" class="form-control" id="customerName" placeholder="Contact Email">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label">Pickup Address</label>
+        <div class="col-sm-6">
+          <textarea class="form-control" id="addressName" rows="3" placeholder="Address"></textarea>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="city" class="col-sm-2 control-label">Pickup Location</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" id="city" placeholder="Infosys, Trivandrum">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="state" class="col-sm-2 control-label">Pickup State</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" id="state" placeholder="State">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="consignment" class="col-sm-2 control-label">Consignment ID</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" id="consignment" placeholder="Consignment ID">
+        </div>
+      </div>
+      <!--<div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox"> Remember me
+            </label>
+          </div>
+        </div>
+      </div>-->
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-default" ng-click="newConsignment()">Add Consignment</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

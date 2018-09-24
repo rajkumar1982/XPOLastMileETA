@@ -1,0 +1,236 @@
+/* app css stylesheet */
+
+@media screen and (max-width: 500px) {
+  .page-top {
+    padding: 0 20px; } }
+    
+    
+.page-top {
+  background-color: #fcfcfc;
+  position: fixed;
+  z-index: 904;
+  box-shadow: 2px 0px 3px rgba(0, 0, 0, 0.5);
+  height: 66px;
+  width: 100%;
+  min-width: 320px;
+  padding: 0 32px 0 40px; }
+.page-top.scrolled {
+    background-color: rgba(0, 0, 0, 0.85); }
+    
+.page-top-right-icons {
+  float: right;
+  min-width: 230px;
+  margin-top: 10px; }
+  
+  
+a.al-logo {
+  color: #ffffff;
+  display: block;
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+  white-space: nowrap;
+  float: left;
+  outline: none !important;
+  line-height: 60px; }
+  a.al-logo span {
+    color: #209e91; }
+
+/*--body  */
+::-webkit-scrollbar {
+  width: 0.5em;
+  height: 0.5em; }
+
+::-webkit-scrollbar-thumb {
+  background: #d9d9d9;
+  cursor: pointer; }
+
+::-webkit-scrollbar-track {
+  background: transparent; }
+
+body {
+  scrollbar-face-color: #d9d9d9;
+  scrollbar-track-color: transparent; }
+
+html {
+  position: relative;
+  min-width: 320px; }
+
+html, body {
+  min-height: 100%;
+  min-width: 320px; }
+
+body {
+  font: 14px/16px "Roboto", sans-serif;
+  color: #ffffff;
+  background-color: #F0F3F4;
+  display: block; }
+  body::before {
+    content: '';
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url("assets/img/blur-bg.jpg") no-repeat center center;
+    background-size: cover;
+    will-change: transform;
+    z-index: -1; }
+/*--end  */
+
+.my-view {
+  margin-left: 10px;
+  padding: 66px 0 34px 0;
+  min-height: 500px;
+  //display:none;
+ // height:100%;
+}          
+    
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li + li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+
+h3{
+	color:#AAF374;
+}
+
+
+#map {
+        min-height: 300px !important;
+        width:auto !important;
+  border-radius: 5px;
+   border: 2px solid #63BBB2;
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+        
+       
+      }
+      
+.chart {
+  width: 100%;
+  height: 250px;
+  font-size: 11px;
+  border-radius: 5px;
+ //   border: 2px solid #73AD21;
+   border: 2px solid #63BBB2;
+  //  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+  
+     }
+ 
+ .table {
+   box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+  
+     }    
+
+.amcharts-graph-g2 .amcharts-graph-stroke {
+  stroke-dasharray: 3px 3px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  -webkit-animation: am-moving-dashes 1s linear infinite;
+  animation: am-moving-dashes 1s linear infinite;
+}
+
+@-webkit-keyframes am-moving-dashes {
+  100% {
+    stroke-dashoffset: -31px;
+  }
+}
+@keyframes am-moving-dashes {
+  100% {
+    stroke-dashoffset: -31px;
+  }
+}
+
+
+.lastBullet {
+  -webkit-animation: am-pulsating 1s ease-out infinite;
+  animation: am-pulsating 1s ease-out infinite;
+	fill: #04FF00;
+    stroke: #1F08E2;
+}
+
+
+
+
+}
+@-webkit-keyframes am-pulsating {
+  0% {
+    stroke-opacity: 1;
+    stroke-width: 0px;
+  }
+  100% {
+    stroke-opacity: 0;
+    stroke-width: 50px;
+  }
+}
+@keyframes am-pulsating {
+  0% {
+    stroke-opacity: 1;
+    stroke-width: 0px;
+  }
+  100% {
+    stroke-opacity: 0;
+    stroke-width: 50px;
+  }
+}
+
+.amcharts-graph-column-front {
+  -webkit-transition: all .3s .3s ease-out;
+  transition: all .3s .3s ease-out;
+}
+.amcharts-graph-column-front:hover {
+  fill: green;
+  stroke: #496375;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+.amcharts-graph-g3 {
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  stroke-dasharray: 500%;
+  stroke-dasharray: 0 /;    /* fixes IE prob */
+  stroke-dashoffset: 0 /;   /* fixes IE prob */
+  -webkit-animation: am-draw 40s;
+  animation: am-draw 40s;
+}
+@-webkit-keyframes am-draw {
+    0% {
+        stroke-dashoffset: 500%;
+    }
+    100% {
+        stroke-dashoffset: 0%;
+    }
+}
+@keyframes am-draw {
+    0% {
+        stroke-dashoffset: 500%;
+    }
+    100% {
+        stroke-dashoffset: 0%;
+    }
+}
+/* OVERWRITE OUR MAIN STYLE */
+.demo-flipper-front.demo-panel-white, body {
+  background-color: #161616;
+}									
