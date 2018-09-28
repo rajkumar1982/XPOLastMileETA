@@ -37,7 +37,7 @@ import com.lastmile.vo.Address;
 import com.lastmile.vo.DriverDetailVO;
 import com.lastmile.vo.RouteDetails;
 
-import net.gpedro.integrations.slack.SlackSendMesage;
+//import net.gpedro.integrations.slack.SlackSendMesage;
 
 @Service("userService")
 public class UserServiceImpl implements UserService{
@@ -109,8 +109,8 @@ public class UserServiceImpl implements UserService{
 					driverDetailVO.setRevisedEstimatedTime(driverDetailVO.getEstimatedArrivalTime() + newDelay);
 					if(newDelay>THREADHOLDLIMIT){
 						
-						SlackSendMesage slack = new SlackSendMesage(); 
-						slack.SendSlackNotification("XPO Logistics ETA Alert-DriverID: " + driverDetailVO.getDriverId() + " - Shipment "+ driverDetailVO.getName() +" is delayed.");
+						//SlackSendMesage slack = new SlackSendMesage(); 
+						//slack.SendSlackNotification("XPO Logistics ETA Alert-DriverID: " + driverDetailVO.getDriverId() + " - Shipment "+ driverDetailVO.getName() +" is delayed.");
 						 /*String szTo = "ranji.abr@gmail.com";//change accordingly
 					      String szSubject = "XPO Logistics ETA Alert";
 					      String szBody = "The new ETA time for your shipment"+driverDetailVO.getName()+"is"+ driverDetailVO.getRevisedEstimatedTime();
